@@ -1182,11 +1182,17 @@
 
     searchResults = searchResults.filter(x=>x.map == skeld);
     console.log(searchResults);
-    searchResults = searchResults.filter(x=>x.map == polus);
+    // searchResults = searchResults.filter(x=>x.map == MIRA);
+    // console.log(searchResults);
+    // searchResults = searchResults.filter(x=>x.map == polus);
     // console.log("All: " + data);
     console.log(searchResults);
-    var map = searchResults.map;
-    document.getElementById("demo").innerHTML = "Map" + map;
+    var x, txt = "";
+    for (x in searchResults)
+    {
+      txt += searchResults[x] + " ";
+    }
+    document.getElementById("demo").innerHTML = "Found: " + txt;
     // hold value of Zero Short Tasks
     // var x = document.getElementById("0ST").value;
     // searchResults.filter(x=>x.someProp == someSearchCriteria)

@@ -3,6 +3,10 @@ body {
     background-color: slategray;
     color: white;
 }
+nav {
+    margin-bottom: 20px;
+}
+
 
 h1 {
     font-family: 'Amatic SC', cursive;
