@@ -74,8 +74,10 @@
 
               <!-- Confirm Ejects -->
               <p>Confirm Ejects</p>
-              <input type="checkbox" id="CE">
-              <label for="CE">Yes</label>
+              <input type="checkbox" id="CEY">
+              <label for="CEY">Yes</label>
+              <input type="checkbox" id="CEN">
+              <label for="CEN">No</label>
 
               <!-- # Emergency Meetings -->
               <!-- 10 options -->
@@ -120,6 +122,10 @@
               <label for="25EC">25s</label>
               <input type="checkbox" id="30EC">
               <label for="30EC">30s</label>
+              <input type="checkbox" id="35EC">
+              <label for="35EC">35s</label>
+              <input type="checkbox" id="40EC">
+              <label for="40EC">40s</label>
               <input type="checkbox" id="45EC">
               <label for="45EC">45s</label>
               <input type="checkbox" id="50EC">
@@ -203,8 +209,10 @@
               <!-- Yes/No -->
               <!-- 1 Block -->
               <p>Anonymous Votes</p>
-              <input type="checkbox" id="AV">
-              <label for="AV">Yes</label>
+              <input type="checkbox" id="AVY">
+              <label for="AVY">Yes</label>
+              <input type="checkbox" id="AVN">
+              <label for="AVN">No</label>
 
               <!-- Player Speed -->
               <!-- 0.5x, 0.75x, 1.0x, 1.25x, 1.5x, 1.75x, 2.0x, 2.25x, 2.5x, 2.75x, 3.0x -->
@@ -383,10 +391,12 @@
 
               <!-- Visual Tasks -->
               <!-- Yes/No -->
-              <!-- 1 box -->
+              <!-- 2 options -->
               <p>Visual Tasks</p>
-              <input type="checkbox" id="visual">
-              <label for="visual">Yes</label>
+              <input type="checkbox" id="visualY">
+              <label for="visualY">Yes</label>
+              <input type="checkbox" id="visualN">
+              <label for="visualN">No</label>
 
               <!-- Task Bar Updates -->
               <!-- Always, Meetings, Never -->
@@ -460,6 +470,8 @@
   var data =
   [
   {
+      "gameID": "",
+      "numPlayers": 6,
       "map": "Polus",
       "numImp": 3,
       "confirmEjects": "no",
@@ -481,6 +493,8 @@
 
   },
   {
+      "gameID": "",
+      "numPlayers": 6,
       "map": "Skeld",
       "numImp": 2,
       "confirmEjects": "yes",
@@ -504,7 +518,188 @@
   
   function findMatch()
   {
+    console.log('finding matches!');
     // 18 options
+    // Map
+    var skeld = document.getElementById("Skeld").value;
+    var MIRA = document.getElementById("MIRA").value;
+    var polus = document.getElementById("Polus").value;
+    // # Imposters
+    var oneImp = document.getElementById("1Imp").value;
+    var twoImp = docoument.getElementByID("2Imp").value;
+    var threeImp = document.getElementById("3Imp").value;
+    // Confirm Ejects
+    var CEY = document.getElementById("CEY").value;
+    var CEN = document.getElementById("CEN").value;
+    // # Emergency Meetings
+    var E0 = document.getElementById("0E").value
+    var E1 = document.getElementById("1E").value;
+    var E2 = document.getElementById("2E").value;
+    var E3 = document.getElementById("3E").value;
+    var E4 = document.getElementById("4E").value;
+    var E5 = document.getElementById("5E").value;
+    var E6 = document.getElementById("6E").value;
+    var E7 = document.getElementById("7E").value;
+    var E8 = document.getElementById("8E").value;
+    var E9 = document.getElementById("9E").value;
+    // Emergency Meeting Cooldown
+    var EC0 = document.getElementById("0EC").value;
+    var EC5 = document.getElementById("5EC").value;
+    var EC10 = document.getElementById("10EC").value;
+    var EC15 = document.getElementById("15EC").value;
+    var EC20 = document.getElementById("20EC").value;
+    var EC25 = document.getElementById("25EC").value;
+    var EC30 = document.getElementById("30EC").value;
+    var EC35 = document.getElementById("35EC").value;
+    var EC40 = document.getElementById("40EC").value;
+    var EC45 = document.getElementById("45EC").value;
+    var EC50 = document.getElementById("50EC").value;
+    var EC55 = document.getElementById("55EC").value;
+    var EC60 = document.getElementById("60EC").value;
+    // Discussion Time
+    var DT0 = document.getElementById("0DT").value;
+    var DT15 = document.getElementById("15DT").value;
+    var DT30 = document.getElementById("30DT").value;
+    var DT45 = document.getElementById("45DT").value;
+    var DT60 = document.getElementById("60DT").value;
+    var DT75 = document.getElementById("75DT").value;
+    var DT90 = document.getElementById("90DT").value;
+    var DT105 = document.getElementById("105DT").value;
+    var DT120 = document.getElementById("120DT").value;
+    // Vote Time
+    var VT0 = document.getElementById("0VT").value;
+    var VT15 = document.getElementById("15VT").value;
+    var VT30 = document.getElementById("30VT").value;
+    var VT45 = document.getElementById("45VT").value;
+    var VT60 = document.getElementById("60VT").value;
+    var VT75 = document.getElementById("75VT").value;
+    var VT90 = document.getElementById("90VT").value;
+    var VT105 = document.getElementById("105VT").value;
+    var VT120 = document.getElementById("120VT").value;
+    var VT135 = document.getElementById("135VT").value;
+    var VT150 = document.getElementById("150VT").value;
+    var VT165 = document.getElementById("165VT").value;
+    var VT180 = document.getElementById("180VT").value;
+    var VT195 = document.getElementById("195VT").value;
+    var VT210 = document.getElementById("210VT").value;
+    var VT225 = document.getElementById("225VT").value;
+    var VT240 = document.getElementById("240VT").value;
+    var VT255 = document.getElementById("255VT").value;
+    var VT270 = document.getElementById("270VT").value;
+    var VT285 = document.getElementById("285VT").value;
+    var VT300 = document.getElementById("300VT").value;
+    // Anynonmous Voting
+    var AVY = document.getElementById("AVY").value;
+    var AVN = document.getElementById("AVN").value;
+    // Player Speed
+    var Shalf = document.getElementById("0.5").value;
+    var S3fourth = document.getElementById("0.75").value;
+    var S1 = document.getElementById("1.0").value;
+    var S1n1fourth = document.getElementById("1.25").value;
+    var S1nhalf = document.getElementById("1.5").value;
+    var S1n3fourth = document.getElementById("1.75").value;
+    var S2 = document.getElementById("2.0").value;
+    var S2n1fourth = document.getElementById("2.25").value;
+    var S2nhalf = document.getElementById("2.5").value;
+    var S2n3fourth = document.getElementById("2.75").value;
+    var S3 = document.getElementById("3.0").value;
+    // Crewmate Vision
+    var C1fourth = document.getElementById("0.25C").value;
+    var Chalf = document.getElementById("0.5C").value;
+    var C3fourth = document.getElementById("0.75C").value;
+    var C1 = document.getElementById("1.0C").value;
+    var C1n1fourth = document.getElementById("1.25C").value;
+    var C1nhalf = document.getElementById("1.5C").value;
+    var C1n3fourth = document.getElementById("1.75C").value;
+    var C2 = document.getElementById("2.0C").value;
+    var C2n1fourth = document.getElementById("2.25C").value;
+    var C2nhalf = document.getElementById("2.5C").value;
+    var C2n3fourth = document.getElementById("2.75C").value;
+    var C3 = document.getElementById("3.0C").value;
+    var C3n1fourth = document.getElementById("3.25C").value;
+    var C3nhalf = document.getElementById("3.5C").value;
+    var C3n3fourth = document.getElementById("3.75C").value;
+    var C4 = document.getElementById("4.0C").value;
+    var C4n1fourth = document.getElementById("4.25C").value;
+    var C4nhalf = document.getElementById("4.5C").value;
+    var C4n3fourth = document.getElementById("4.75C").value;
+    var C5 = document.getElementById("5.0C").value;
+    // Imposter Vision
+    var I1fourth = document.getElementById("0.25I").value;
+    var Ihalf = document.getElementById("0.5I").value;
+    var I3fourth = document.getElementById("0.75I").value;
+    var I1 = document.getElementById("1.0I").value;
+    var I1n1fourth = document.getElementById("1.25I").value;
+    var I1nhalf = document.getElementById("1.5I").value;
+    var I1n3fourth = document.getElementById("1.75I").value;
+    var I2 = document.getElementById("2.0I").value;
+    var I2n1fourth = document.getElementById("2.25I").value;
+    var I2nhalf = document.getElementById("2.5I").value;
+    var I2n3fourth = document.getElementById("2.75I").value;
+    var I3 = document.getElementById("3.0I").value;
+    var I3n1fourth = document.getElementById("3.25I").value;
+    var I3nhalf = document.getElementById("3.5I").value;
+    var I3n3fourth = document.getElementById("3.75I").value;
+    var I4 = document.getElementById("4.0I").value;
+    var I4n1fourth = document.getElementById("4.25I").value;
+    var I4nhalf = document.getElementById("4.5I").value;
+    var I4n3fourth = document.getElementById("4.75I").value;
+    var I5 = document.getElementById("5.0I").value;
+    // Kill Cooldown
+    var KC10 = document.getElementById("10KC").value;
+    var KC12 = document.getElementById("12KC").value;
+    var KC15 = document.getElementById("15KC").value;
+    var KC17 = document.getElementById("17KC").value;
+    var KC20 = document.getElementById("20KC").value;
+    var KC22 = document.getElementById("22KC").value;
+    var KC25 = document.getElementById("25KC").value;
+    var KC27 = document.getElementById("27KC").value;
+    var KC30 = document.getElementById("30KC").value;
+    var KC32 = document.getElementById("32KC").value;
+    var KC35 = document.getElementById("35KC").value;
+    var KC37 = document.getElementById("37KC").value;
+    var KC40 = document.getElementById("40KC").value;
+    var KC42 = document.getElementById("42KC").value;
+    var KC45 = document.getElementById("45KC").value;
+    var KC47 = document.getElementById("47KC").value;
+    var KC50 = document.getElementById("50KC").value;
+    var KC52 = document.getElementById("52KC").value;
+    var KC55 = document.getElementById("55KC").value;
+    var KC57 = document.getElementById("57KC").value;
+    var KC60 = document.getElementById("60KC").value;
+    // Kill Distance
+    var short = document.getElementById("short").value;
+    var med = document.getElementById("med").value;
+    var long = document.getElementById("long").value;
+    // Visual Tasks
+    var visualY = document.getElementById("visualY").value;
+    var visualN = document.getElementById("visualN").value;
+    // Taskbar Update
+    var always = document.getElementById("always").value;
+    var meetings = document.getElementById("meetings").value;
+    var never = document.getElementById("never").value;
+    // Common Tasks
+    var CT0 = document.getElementById("0CT").value;
+    var CT1 = document.getElementById("1CT").value;
+    var CT2 = document.getElementById("2CT").value;
+    // Long Tasks
+    var LT0 = document.getElementById("0LT").value;
+    var LT1 = document.getElementById("1LT").value;
+    var LT2 = document.getElementById("2LT").value;
+    var LT3 = document.getElementById("3LT").value;
+    // Short Tasks
+    var ST0 = document.getElementById("0ST").value;
+    var ST1 = document.getElementById("1ST").value;
+    var ST2 = document.getElementById("2ST").value;
+    var ST3 = document.getElementById("3ST").value;
+    var ST4 = document.getElementById("4ST").value;
+    var ST5 = document.getElementById("5ST").value;
+
+    // make copy of data for displaying
+    var searchResults = data;
+    searchResults.filter(x=>x.Skeld == skeld);
+    console.log(data);
+    document.getElementById("demo").innerHTML = searchResults;
     // hold value of Zero Short Tasks
     // var x = document.getElementById("0ST").value;
     // searchResults.filter(x=>x.someProp == someSearchCriteria)
