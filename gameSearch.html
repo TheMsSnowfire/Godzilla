@@ -11,15 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS Style Sheet -->
     <link rel="stylesheet" type="text/css" href="mainStyle.css">
+    <!-- Little Icon in the Corner -->
+    <link rel="icon" href="FavIcon.png">
     <title>Find a Game!</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <h2>Hello 2 you!</h2>
-    <h3> Hello</h3>
     <!-- Header -->
     <div>
-        <h1>Hello World! this is julio</h1>
+        <h1>Between Us</h1>
     </div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -60,18 +59,236 @@
     <!-- Main Part of Page -->
     <!-- Put all of your information into this div -->
     <div class="row">
+        <li>Choose Your Game Seetings!</li><br>
+        <form>
+            <!-- Map Info -->
+            <p>Map</p>
+            <input type=checkbox id="Skeld">
+            <label for="Skeld">The Skeld</label><br>
+            <input type="checkbox" id="MIRA">
+            <label for="MIRA">MIRA HQ</label><br>
+            <input type="checkbox" id="Polus">
+            <label for="Polus">Polus</label><br>
+
+            <!-- # Imposters -->
+            <p># Imposters</p>
+            <input type="checkbox" id="1Imp">
+            <label for="1Imp">1</label><br>
+            <input type="checkbox" id="2Imp">
+            <label for="2Imp">2</label><br>
+            <input type="checkbox" id="3Imp">
+            <label for="3Imp">3</label><br>
+
+            <!-- Confirm Ejects -->
+            <p>Confirm Ejects</p>
+            <input type="checkbox" id="CE">
+            <label for="CE">Yes</label>
+
+            <!-- # Emergency Meetings -->
+            <!-- 10 options -->
+            <!-- 0, 1, 2, 3, 4, 5, 6, 7, 8 , 9 -->
+            <p># Emergency Meetings</p>
+            <input type="checkbox" id="0E">
+            <label for="1E">0</label>
+            <input type="checkbox" id="1E">
+            <label for="1E">1</label>
+            <input type="checkbox" id="2E">
+            <label for="1E">2</label>
+            <input type="checkbox" id="3E">
+            <label for="1E">3</label>
+            <input type="checkbox" id="4E">
+            <label for="1E">4</label>
+            <input type="checkbox" id="5E">
+            <label for="1E">5</label>
+            <input type="checkbox" id="6E">
+            <label for="1E">6</label>
+            <input type="checkbox" id="7E">
+            <label for="1E">7</label>
+            <input type="checkbox" id="8E">
+            <label for="1E">8</label>
+            <input type="checkbox" id="9E">
+            <label for="1E">9</label>
+
+            <!-- Emergency Cooldown -->
+            <!-- 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60 -->
+            <!-- 13 options -->
+            <p>Emergency Cooldown</p>
+            <input type="checkbox" id="0EC">
+            <label for="0EC">0s</label>
+            <input type="checkbox" id="5EC">
+            <label for="5EC">5s</label>
+            <input type="checkbox" id="10EC">
+            <label for="10EC">10s</label>
+            <input type="checkbox" id="15EC">
+            <label for="15EC">15s</label>
+            <input type="checkbox" id="20EC">
+            <label for="20EC">20s</label>
+            <input type="checkbox" id="25EC">
+            <label for="25EC">25s</label>
+            <input type="checkbox" id="30EC">
+            <label for="30EC">30s</label>
+            <input type="checkbox" id="45EC">
+            <label for="45EC">45s</label>
+            <input type="checkbox" id="50EC">
+            <label for="50EC">50s</label>
+            <input type="checkbox" id="55EC">
+            <label for="55EC">55s</label>
+            <input type="checkbox" id="60EC">
+            <label for="60EC">60s</label>
+
+            <!-- Discussion Time -->
+            <!-- 0, 15, 30, 45, 60, 75, 90, 105, 120 -->
+            <!-- 9 options -->
+            <p>Discussion Time</p>
+            <input type="checkbox" id="0DT">
+            <label for="0DT">0s</label>
+            <input type="checkbox" id="15DT">
+            <label for="15DT">15s</label>
+            <input type="checkbox" id="30DT">
+            <label for="30DT">30s</label>
+            <input type="checkbox" id="45DT">
+            <label for="45DT">45s</label>
+            <input type="checkbox" id="60DT">
+            <label for="60DT">60s</label>
+            <input type="checkbox" id="75DT">
+            <label for="75DT">75s</label>
+            <input type="checkbox" id="90DT">
+            <label for="90DT">90s</label>
+            <input type="checkbox" id="105DT">
+            <label for="105DT">105s</label>
+            <input type="checkbox" id="120DT">
+            <label for="120DT">120s</label>
+
+            <!-- Voting Time -->
+            <!-- 0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 285, 300 -->
+            <!-- 21 Options -->
+            <p>Voting Time</p>
+            <input type="checkbox" id="0VT">
+            <label for="0VT">0s</label>
+            <input type="checkbox" id="15VT">
+            <label for="15VT">15s</label>
+            <input type="checkbox" id="30VT">
+            <label for="30VT">30s</label>
+            <input type="checkbox" id="45VT">
+            <label for="45VT">45s</label>
+            <input type="checkbox" id="60VT">
+            <label for="60VT">60s</label>
+            <input type="checkbox" id="75VT">
+            <label for="75VT">75s</label>
+            <input type="checkbox" id="90VT">
+            <label for="90VT">90s</label>
+            <input type="checkbox" id="105VT">
+            <label for="105VT">105s</label>
+            <input type="checkbox" id="120VT">
+            <label for="120VT">120s</label>
+            <input type="checkbox" id="135VT">
+            <label for="135VT">135s</label>
+            <input type="checkbox" id="150VT">
+            <label for="150VT">150s</label>
+            <input type="checkbox" id="165VT">
+            <label for="165VT">165s</label>
+            <input type="checkbox" id="180VT">
+            <label for="180VT">180s</label>
+            <input type="checkbox" id="195VT">
+            <label for="195VT">195s</label>
+            <input type="checkbox" id="210VT">
+            <label for="210VT">210s</label>
+            <input type="checkbox" id="225VT">
+            <label for="225VT">225s</label>
+            <input type="checkbox" id="240VT">
+            <label for="240VT">240s</label>
+            <input type="checkbox" id="255VT">
+            <label for="255VT">255s</label>
+            <input type="checkbox" id="270VT">
+            <label for="270VT">270s</label>
+            <input type="checkbox" id="285VT">
+            <label for="285VT">285s</label>
+            <input type="checkbox" id="300VT">
+            <label for="300VT">300s</label>
+
+            <!-- Anonymous Votes -->
+            <!-- Yes/No -->
+            <!-- 1 Block -->
+            <p>Anonymous Votes</p>
+            <input type="checkbox" id="AV">
+            <label for="AV">Yes</label>
+
+            <!-- Player Speed -->
+            <!-- 0.5x, 0.75x, 1.0x, 1.25x, 1.5x, 1.75x, 2.0x, 2.25x, 2.5x, 2.75x, 3.0x -->
+            <!-- 11 options -->
+            <p>Player Speed</p>
+            <input type="checkbox" id="0.5">
+            <label for="0.5">0.5x</label>
+            <input type="checkbox" id="0.75">
+            <label for="0.75">0.75x</label>
+            <input type="checkbox" id="1.0">
+            <label for="1.0">1.0x</label>
+            <input type="checkbox" id="1.25">
+            <label for="1.25">1.25x</label>
+            <input type="checkbox" id="1.5">
+            <label for="1.5">1.5x</label>
+            <input type="checkbox" id="1.75">
+            <label for="1.75">1.75x</label>
+            <input type="checkbox" id="2.0">
+            <label for="2.0">2.0x</label>
+            <input type="checkbox" id="2.25">
+            <label for="2.25">2.25x</label>
+            <input type="checkbox" id="2.5">
+            <label for="2.5">2.5x</label>
+            <input type="checkbox" id="2.75">
+            <label for="2.75">2.75x</label>
+            <input type="checkbox" id="3.0">
+            <label for="3.0">3.0x</label>
+
+            <!-- Crewmate Vision -->
+            <!-- 0.25x, 0.5x, 0.75x, 1.0x, 1.25x, 1.5x, 1.75x, 2.0x, 2.25x, 2.5x, 2.7x, 3.0x, 3.25x, 3.5x, 3.75x, 4.0x, 4.25x, 4.5x, 4.75x, 5.0x -->
+            <!-- 20 options -->
+
+        </form>
+
+        <!-- Imposter Vision -->
+        <!-- 0.25x, 0.5x, 0.75x, 1.0x, 1.25x, 1.5x, 1.75x, 2.0x, 2.25x, 2.5x, 2.7x, 3.0x, 3.25x, 3.5x, 3.75x, 4.0x, 4.25x, 4.5x, 4.75x, 5.0x -->
+        <!-- 20 options -->
+
+        <!-- Kill Cooldown -->
+        <!-- 10.0, 12.5, 15.0, 17.5, 20.0, 22.5, 25.0, 27.5, 30.0, 32.5, 35.0, 37.5, 40.0, 42.5, 45.0, 47.5, 50.0, 52.5, 55.0, 57.5, 60.0 -->
+        <!-- 21 options -->
+
+        <!-- Kill Distance -->
+        <!-- Short, Medium, Long -->
+        <!-- 3 options -->
+
+        <!-- Visual Tasks -->
+        <!-- Yes/No -->
+        <!-- 1 box -->
+
+        <!-- Task Bar Updates -->
+        <!-- Always, Meetings, Never -->
+        <!-- 3 options -->
+
+        <!-- # Common Tasks -->
+        <!-- 0, 1, 2 -->
+        <!-- 3 options -->
+
+        <!-- # Long Tasks -->
+        <!-- 0, 1, 2, 3 -->
+        <!-- 4 options -->
+
+        <!-- # Short Tasks -->
+        <!-- 0, 1, 2, 3, 4, 5 -->
+        <!--  6 options -->
         <!-- Left Column -->
-        <div class="col-sm">
+        <!-- <div class="col-sm">
             <p>Left Column</p>
-        </div>
+        </div> -->
         <!-- Middle Column-->
-        <div class="col-sm"> 
+        <!-- <div class="col-sm"> 
             <p>Hello 2 you!</p>
-        </div>
+        </div> -->
         <!-- Right Column -->
-        <div class="col-sm">
+        <!-- <div class="col-sm">
             <p>Right Column</p>
-        </div>
+        </div> -->
     </div>
     
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
