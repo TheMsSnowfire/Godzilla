@@ -35,3 +35,20 @@ h2 {
     font-size: 20px;
     align-self: center;
 }
+
+.centerButton {
+    text-align: center;
+}
+
+.preferencesHead {
+    color: white;
+    font-size: 50px;
+}
+
+.userClick {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
