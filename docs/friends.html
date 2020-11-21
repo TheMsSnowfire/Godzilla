@@ -100,7 +100,7 @@
                 <!-- Clickable buttons -->
                 <div class="row">
                     <div class="col-sm centerButton">
-                        <button type="button" class="btn btn-dark" id="friend" onclick="friend()">Remove friend</button>
+                        <button type="button" class="btn btn-dark" id="friend2" onclick="friend2()">Remove friend</button>
                     </div>
                     <div class="col-sm centerButton">
                         <a href="message.html"><button type="button" class="btn btn-dark">Start chat</button></a>
@@ -149,6 +149,18 @@
     function friend()
     {
         var status = document.getElementById("friend");
+        if(status.innerHTML === "Add friend")
+        {
+            status.innerHTML = "Remove friend";
+        }
+        else
+        {
+            status.innerHTML = "Add friend";
+        }
+    }
+    function friend2()
+    {
+        var status = document.getElementById("friend2");
         if(status.innerHTML === "Add friend")
         {
             status.innerHTML = "Remove friend";

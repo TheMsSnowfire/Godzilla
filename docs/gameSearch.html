@@ -52,402 +52,828 @@
         <!-- Left Column-->
         <!-- Holds the search criteria-->
         <div class="col-sm"> 
-          <form>
+          <form class="gameSearchPadding">
               <!-- Map Info -->
               <p>Map <i class="fas fa-caret-down"></i></p>
-              <input type=checkbox id="Skeld">
-              <label for="Skeld">The Skeld</label><br>
-              <input type="checkbox" id="MIRA">
-              <label for="MIRA">MIRA HQ</label><br>
-              <input type="checkbox" id="Polus">
-              <label for="Polus">Polus</label><br>
+              <div class="row">
+                <div class="col">
+                  <input type=checkbox id="Skeld">
+                  <label for="Skeld">The Skeld</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="MIRA">
+                  <label for="MIRA">MIRA HQ</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="Polus">
+                  <label for="Polus">Polus</label>
+                </div>
+              </div>
 
               <!-- # Imposters -->
-              <p># Imposters</p>
-              <input type="checkbox" id="1Imp">
-              <label for="1Imp">1</label><br>
-              <input type="checkbox" id="2Imp">
-              <label for="2Imp">2</label><br>
-              <input type="checkbox" id="3Imp">
-              <label for="3Imp">3</label><br>
+              <p># Imposters <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="1Imp">
+                  <label for="1Imp">1</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2Imp">
+                  <label for="2Imp">2</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3Imp">
+                  <label for="3Imp">3</label>
+                </div>
+              </div>
 
               <!-- Confirm Ejects -->
-              <p>Confirm Ejects</p>
-              <input type="checkbox" id="CEY">
-              <label for="CEY">Yes</label>
-              <input type="checkbox" id="CEN">
-              <label for="CEN">No</label>
+              <p>Confirm Ejects <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="CEY">
+                  <label for="CEY">Yes</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="CEN">
+                  <label for="CEN">No</label>
+                </div>
+              </div>
 
               <!-- # Emergency Meetings -->
               <!-- 10 options -->
               <!-- 0, 1, 2, 3, 4, 5, 6, 7, 8 , 9 -->
-              <p># Emergency Meetings</p>
-              <input type="checkbox" id="0E">
-              <label for="1E">0</label>
-              <input type="checkbox" id="1E">
-              <label for="1E">1</label>
-              <input type="checkbox" id="2E">
-              <label for="1E">2</label>
-              <input type="checkbox" id="3E">
-              <label for="1E">3</label>
-              <input type="checkbox" id="4E">
-              <label for="1E">4</label>
-              <input type="checkbox" id="5E">
-              <label for="1E">5</label>
-              <input type="checkbox" id="6E">
-              <label for="1E">6</label>
-              <input type="checkbox" id="7E">
-              <label for="1E">7</label>
-              <input type="checkbox" id="8E">
-              <label for="1E">8</label>
-              <input type="checkbox" id="9E">
-              <label for="1E">9</label>
+              <p># Emergency Meetings <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="0E">
+                  <label for="1E">0</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1E">
+                  <label for="1E">1</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2E">
+                  <label for="1E">2</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3E">
+                  <label for="1E">3</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="4E">
+                  <label for="1E">4</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="5E">
+                  <label for="1E">5</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="6E">
+                  <label for="1E">6</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="7E">
+                  <label for="1E">7</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="8E">
+                  <label for="1E">8</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="9E">
+                  <label for="1E">9</label>
+                </div>
+              </div>
 
               <!-- Emergency Cooldown -->
               <!-- 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60 -->
               <!-- 13 options -->
-              <p>Emergency Cooldown</p>
-              <input type="checkbox" id="0EC">
-              <label for="0EC">0s</label>
-              <input type="checkbox" id="5EC">
-              <label for="5EC">5s</label>
-              <input type="checkbox" id="10EC">
-              <label for="10EC">10s</label>
-              <input type="checkbox" id="15EC">
-              <label for="15EC">15s</label>
-              <input type="checkbox" id="20EC">
-              <label for="20EC">20s</label>
-              <input type="checkbox" id="25EC">
-              <label for="25EC">25s</label>
-              <input type="checkbox" id="30EC">
-              <label for="30EC">30s</label>
-              <input type="checkbox" id="35EC">
-              <label for="35EC">35s</label>
-              <input type="checkbox" id="40EC">
-              <label for="40EC">40s</label>
-              <input type="checkbox" id="45EC">
-              <label for="45EC">45s</label>
-              <input type="checkbox" id="50EC">
-              <label for="50EC">50s</label>
-              <input type="checkbox" id="55EC">
-              <label for="55EC">55s</label>
-              <input type="checkbox" id="60EC">
-              <label for="60EC">60s</label>
+              <p>Emergency Cooldown <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="0EC">
+                  <label for="0EC">0s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="5EC">
+                  <label for="5EC">5s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="10EC">
+                  <label for="10EC">10s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="15EC">
+                  <label for="15EC">15s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="20EC">
+                  <label for="20EC">20s</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="25EC">
+                  <label for="25EC">25s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="30EC">
+                  <label for="30EC">30s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="35EC">
+                  <label for="35EC">35s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="40EC">
+                  <label for="40EC">40s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="45EC">
+                  <label for="45EC">45s</label>
+                </div>
+              </div>
+
+              <div class="row">
+                
+                <div class="col">
+                  <input type="checkbox" id="50EC">
+                  <label for="50EC">50s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="55EC">
+                  <label for="55EC">55s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="60EC">
+                  <label for="60EC">60s</label>
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+              </div>
 
               <!-- Discussion Time -->
               <!-- 0, 15, 30, 45, 60, 75, 90, 105, 120 -->
               <!-- 9 options -->
-              <p>Discussion Time</p>
-              <input type="checkbox" id="0DT">
-              <label for="0DT">0s</label>
-              <input type="checkbox" id="15DT">
-              <label for="15DT">15s</label>
-              <input type="checkbox" id="30DT">
-              <label for="30DT">30s</label>
-              <input type="checkbox" id="45DT">
-              <label for="45DT">45s</label>
-              <input type="checkbox" id="60DT">
-              <label for="60DT">60s</label>
-              <input type="checkbox" id="75DT">
-              <label for="75DT">75s</label>
-              <input type="checkbox" id="90DT">
-              <label for="90DT">90s</label>
-              <input type="checkbox" id="105DT">
-              <label for="105DT">105s</label>
-              <input type="checkbox" id="120DT">
-              <label for="120DT">120s</label>
+              <p>Discussion Time <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="0DT">
+                  <label for="0DT">0s</label>
+                </div>
+                <div class="col">
+                    <input type="checkbox" id="15DT">
+                    <label for="15DT">15s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="30DT">
+                  <label for="30DT">30s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="45DT">
+                  <label for="45DT">45s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="60DT">
+                  <label for="60DT">60s</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="75DT">
+                  <label for="75DT">75s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="90DT">
+                  <label for="90DT">90s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="105DT">
+                  <label for="105DT">105s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="120DT">
+                  <label for="120DT">120s</label>
+                </div>
+                <div class="col">
+                </div>
+              </div>
 
               <!-- Voting Time -->
               <!-- 0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 285, 300 -->
               <!-- 21 Options -->
-              <p>Voting Time</p>
-              <input type="checkbox" id="0VT">
-              <label for="0VT">0s</label>
-              <input type="checkbox" id="15VT">
-              <label for="15VT">15s</label>
-              <input type="checkbox" id="30VT">
-              <label for="30VT">30s</label>
-              <input type="checkbox" id="45VT">
-              <label for="45VT">45s</label>
-              <input type="checkbox" id="60VT">
-              <label for="60VT">60s</label>
-              <input type="checkbox" id="75VT">
-              <label for="75VT">75s</label>
-              <input type="checkbox" id="90VT">
-              <label for="90VT">90s</label>
-              <input type="checkbox" id="105VT">
-              <label for="105VT">105s</label>
-              <input type="checkbox" id="120VT">
-              <label for="120VT">120s</label>
-              <input type="checkbox" id="135VT">
-              <label for="135VT">135s</label>
-              <input type="checkbox" id="150VT">
-              <label for="150VT">150s</label>
-              <input type="checkbox" id="165VT">
-              <label for="165VT">165s</label>
-              <input type="checkbox" id="180VT">
-              <label for="180VT">180s</label>
-              <input type="checkbox" id="195VT">
-              <label for="195VT">195s</label>
-              <input type="checkbox" id="210VT">
-              <label for="210VT">210s</label>
-              <input type="checkbox" id="225VT">
-              <label for="225VT">225s</label>
-              <input type="checkbox" id="240VT">
-              <label for="240VT">240s</label>
-              <input type="checkbox" id="255VT">
-              <label for="255VT">255s</label>
-              <input type="checkbox" id="270VT">
-              <label for="270VT">270s</label>
-              <input type="checkbox" id="285VT">
-              <label for="285VT">285s</label>
-              <input type="checkbox" id="300VT">
-              <label for="300VT">300s</label>
+              <p>Voting Time <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="0VT">
+                  <label for="0VT">0s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="15VT">
+                  <label for="15VT">15s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="30VT">
+                  <label for="30VT">30s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="45VT">
+                  <label for="45VT">45s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="60VT">
+                  <label for="60VT">60s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="75VT">
+                  <label for="75VT">75s</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="90VT">
+                  <label for="90VT">90s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="105VT">
+                  <label for="105VT">105s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="120VT">
+                  <label for="120VT">120s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="135VT">
+                  <label for="135VT">135s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="150VT">
+                  <label for="150VT">150s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="165VT">
+                  <label for="165VT">165s</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="180VT">
+                  <label for="180VT">180s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="195VT">
+                  <label for="195VT">195s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="210VT">
+                  <label for="210VT">210s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="225VT">
+                  <label for="225VT">225s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="240VT">
+                  <label for="240VT">240s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="255VT">
+                  <label for="255VT">255s</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="270VT">
+                  <label for="270VT">270s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="285VT">
+                  <label for="285VT">285s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="300VT">
+                  <label for="300VT">300s</label>
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+              </div>
 
               <!-- Anonymous Votes -->
               <!-- Yes/No -->
               <!-- 1 Block -->
-              <p>Anonymous Votes</p>
-              <input type="checkbox" id="AVY">
-              <label for="AVY">Yes</label>
-              <input type="checkbox" id="AVN">
-              <label for="AVN">No</label>
+              <p>Anonymous Votes <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="AVY">
+                  <label for="AVY">Yes</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="AVN">
+                  <label for="AVN">No</label>
+                </div>
+              </div>
 
               <!-- Player Speed -->
               <!-- 0.5x, 0.75x, 1.0x, 1.25x, 1.5x, 1.75x, 2.0x, 2.25x, 2.5x, 2.75x, 3.0x -->
               <!-- 11 options -->
-              <p>Player Speed</p>
-              <input type="checkbox" id="0.5">
-              <label for="0.5">0.5x</label>
-              <input type="checkbox" id="0.75">
-              <label for="0.75">0.75x</label>
-              <input type="checkbox" id="1.0">
-              <label for="1.0">1.0x</label>
-              <input type="checkbox" id="1.25">
-              <label for="1.25">1.25x</label>
-              <input type="checkbox" id="1.5">
-              <label for="1.5">1.5x</label>
-              <input type="checkbox" id="1.75">
-              <label for="1.75">1.75x</label>
-              <input type="checkbox" id="2.0">
-              <label for="2.0">2.0x</label>
-              <input type="checkbox" id="2.25">
-              <label for="2.25">2.25x</label>
-              <input type="checkbox" id="2.5">
-              <label for="2.5">2.5x</label>
-              <input type="checkbox" id="2.75">
-              <label for="2.75">2.75x</label>
-              <input type="checkbox" id="3.0">
-              <label for="3.0">3.0x</label>
+              <p>Player Speed <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="0.5">
+                  <label for="0.5">0.5x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="0.75">
+                  <label for="0.75">0.75x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1.0">
+                  <label for="1.0">1.0x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1.25">
+                  <label for="1.25">1.25x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1.5">
+                  <label for="1.5">1.5x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1.75">
+                  <label for="1.75">1.75x</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="2.0">
+                  <label for="2.0">2.0x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2.25">
+                  <label for="2.25">2.25x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2.5">
+                  <label for="2.5">2.5x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2.75">
+                  <label for="2.75">2.75x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3.0">
+                  <label for="3.0">3.0x</label>
+                </div>
+                <div class="col">
+                </div>
+              </div>
 
               <!-- Crewmate Vision -->
               <!-- 0.25x, 0.5x, 0.75x, 1.0x, 1.25x, 1.5x, 1.75x, 2.0x, 2.25x, 2.5x, 2.7x, 3.0x, 3.25x, 3.5x, 3.75x, 4.0x, 4.25x, 4.5x, 4.75x, 5.0x -->
               <!-- 20 options -->
-              <p>Crewmate Vision</p>
-              <input type="checkbox" id="0.25C">
-              <label for="0.25C">0.25x</label>
-              <input type="checkbox" id="0.5C">
-              <label for="0.5C">0.5x</label>
-              <input type="checkbox" id="0.75C">
-              <label for="0.75C">0.75x</label>
-              <input type="checkbox" id="1.0C">
-              <label for="1.0C">1.0x</label>
-              <input type="checkbox" id="1.25C">
-              <label for="1.25C">1.25x</label>
-              <input type="checkbox" id="1.5C">
-              <label for="1.5C">1.5x</label>
-              <input type="checkbox" id="1.75C">
-              <label for="1.75C">1.75x</label>
-              <input type="checkbox" id="2.0C">
-              <label for="2.0C">2.0x</label>
-              <input type="checkbox" id="2.25C">
-              <label for="2.25C">2.25x</label>
-              <input type="checkbox" id="2.5C">
-              <label for="2.5C">2.5x</label>
-              <input type="checkbox" id="2.75C">
-              <label for="2.75C">2.75x</label>
-              <input type="checkbox" id="3.0C">
-              <label for="3.0C">3.0x</label>
-              <input type="checkbox" id="3.25C">
-              <label for="3.25C">3.25x</label>
-              <input type="checkbox" id="3.5C">
-              <label for="3.5C">3.5x</label>
-              <input type="checkbox" id="3.75C">
-              <label for="3.75C">3.75x</label>
-              <input type="checkbox" id="4.0C">
-              <label for="4.0C">4.0x</label>
-              <input type="checkbox" id="4.25C">
-              <label for="4.25C">4.25x</label>
-              <input type="checkbox" id="4.5C">
-              <label for="4.5C">4.5x</label>
-              <input type="checkbox" id="4.75C">
-              <label for="4.75C">4.75x</label>
-              <input type="checkbox" id="5.0C">
-              <label for="5.0C">5.0x</label>
+              <p>Crewmate Vision <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="0.25C">
+                  <label for="0.25C">0.25x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="0.5C">
+                  <label for="0.5C">0.5x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="0.75C">
+                  <label for="0.75C">0.75x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1.0C">
+                  <label for="1.0C">1.0x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1.25C">
+                  <label for="1.25C">1.25x</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="1.5C">
+                  <label for="1.5C">1.5x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1.75C">
+                  <label for="1.75C">1.75x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2.0C">
+                  <label for="2.0C">2.0x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2.25C">
+                  <label for="2.25C">2.25x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2.5C">
+                  <label for="2.5C">2.5x</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="2.75C">
+                  <label for="2.75C">2.75x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3.0C">
+                  <label for="3.0C">3.0x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3.25C">
+                  <label for="3.25C">3.25x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3.5C">
+                  <label for="3.5C">3.5x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3.75C">
+                  <label for="3.75C">3.75x</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="4.0C">
+                  <label for="4.0C">4.0x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="4.25C">
+                  <label for="4.25C">4.25x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="4.5C">
+                  <label for="4.5C">4.5x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="4.75C">
+                  <label for="4.75C">4.75x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="5.0C">
+                  <label for="5.0C">5.0x</label>
+                </div>
+              </div>
 
               <!-- Imposter Vision -->
               <!-- 0.25x, 0.5x, 0.75x, 1.0x, 1.25x, 1.5x, 1.75x, 2.0x, 2.25x, 2.5x, 2.7x, 3.0x, 3.25x, 3.5x, 3.75x, 4.0x, 4.25x, 4.5x, 4.75x, 5.0x -->
               <!-- 20 options -->
-              <p>Imposter Vision</p>
-              <input type="checkbox" id="0.25I">
-              <label for="0.25I">0.25x</label>
-              <input type="checkbox" id="0.5I">
-              <label for="0.5I">0.5x</label>
-              <input type="checkbox" id="0.75I">
-              <label for="0.75I">0.75x</label>
-              <input type="checkbox" id="1.0I">
-              <label for="1.0I">1.0x</label>
-              <input type="checkbox" id="1.25I">
-              <label for="1.25I">1.25x</label>
-              <input type="checkbox" id="1.5I">
-              <label for="1.5I">1.5x</label>
-              <input type="checkbox" id="1.75I">
-              <label for="1.75I">1.75x</label>
-              <input type="checkbox" id="2.0I">
-              <label for="2.0I">2.0x</label>
-              <input type="checkbox" id="2.25I">
-              <label for="2.25I">2.25x</label>
-              <input type="checkbox" id="2.5I">
-              <label for="2.5I">2.5x</label>
-              <input type="checkbox" id="2.75I">
-              <label for="2.75I">2.75x</label>
-              <input type="checkbox" id="3.0I">
-              <label for="3.0I">3.0x</label>
-              <input type="checkbox" id="3.25I">
-              <label for="3.25I">3.25x</label>
-              <input type="checkbox" id="3.5I">
-              <label for="3.5I">3.5x</label>
-              <input type="checkbox" id="3.75I">
-              <label for="3.75I">3.75x</label>
-              <input type="checkbox" id="4.0I">
-              <label for="4.0I">4.0x</label>
-              <input type="checkbox" id="4.25I">
-              <label for="4.25I">4.25x</label>
-              <input type="checkbox" id="4.5I">
-              <label for="4.5I">4.5x</label>
-              <input type="checkbox" id="4.75I">
-              <label for="4.75I">4.75x</label>
-              <input type="checkbox" id="5.0I">
-              <label for="5.0I">5.0x</label>
+              <p>Imposter Vision <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="0.25I">
+                  <label for="0.25I">0.25x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="0.5I">
+                  <label for="0.5I">0.5x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="0.75I">
+                  <label for="0.75I">0.75x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1.0I">
+                  <label for="1.0I">1.0x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1.25I">
+                  <label for="1.25I">1.25x</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="1.5I">
+                  <label for="1.5I">1.5x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1.75I">
+                  <label for="1.75I">1.75x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2.0I">
+                  <label for="2.0I">2.0x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2.25I">
+                  <label for="2.25I">2.25x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2.5I">
+                  <label for="2.5I">2.5x</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="2.75I">
+                  <label for="2.75I">2.75x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3.0I">
+                  <label for="3.0I">3.0x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3.25I">
+                  <label for="3.25I">3.25x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3.5I">
+                  <label for="3.5I">3.5x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3.75I">
+                  <label for="3.75I">3.75x</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="4.0I">
+                  <label for="4.0I">4.0x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="4.25I">
+                  <label for="4.25I">4.25x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="4.5I">
+                  <label for="4.5I">4.5x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="4.75I">
+                  <label for="4.75I">4.75x</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="5.0I">
+                  <label for="5.0I">5.0x</label>
+                </div>
+              </div>
 
               <!-- Kill Cooldown -->
               <!-- 10.0, 12.5, 15.0, 17.5, 20.0, 22.5, 25.0, 27.5, 30.0, 32.5, 35.0, 37.5, 40.0, 42.5, 45.0, 47.5, 50.0, 52.5, 55.0, 57.5, 60.0 -->
               <!-- 21 options -->
-              <p>Kill Cooldown</p>
-              <input type="checkbox" id="10KC">
-              <label for="10KC">10.0s</label>
-              <input type="checkbox" id="12KC">
-              <label for="12KC">12.5s</label>
-              <input type="checkbox" id="15KC">
-              <label for="15KC">15.0s</label>
-              <input type="checkbox" id="17KC">
-              <label for="17KC">17.5s</label>
-              <input type="checkbox" id="20KC">
-              <label for="20KC">20.0s</label>
-              <input type="checkbox" id="22KC">
-              <label for="22KC">22.5s</label>
-              <input type="checkbox" id="25KC">
-              <label for="25KC">25.0s</label>
-              <input type="checkbox" id="27KC">
-              <label for="27KC">27.5s</label>
-              <input type="checkbox" id="30KC">
-              <label for="30KC">30.0s</label>
-              <input type="checkbox" id="32KC">
-              <label for="32KC">32.5s</label>
-              <input type="checkbox" id="35KC">
-              <label for="35KC">35.0s</label>
-              <input type="checkbox" id="37KC">
-              <label for="37KC">37.5s</label>
-              <input type="checkbox" id="40KC">
-              <label for="40KC">40.0s</label>
-              <input type="checkbox" id="42KC">
-              <label for="42KC">42.5s</label>
-              <input type="checkbox" id="45KC">
-              <label for="45KC">45.0s</label>
-              <input type="checkbox" id="47KC">
-              <label for="47KC">47.5s</label>
-              <input type="checkbox" id="50KC">
-              <label for="40KC">50.0s</label>
-              <input type="checkbox" id="52KC">
-              <label for="52KC">52.5s</label>
-              <input type="checkbox" id="55KC">
-              <label for="55KC">55.0s</label>
-              <input type="checkbox" id="57KC">
-              <label for="57KC">57.5s</label>
-              <input type="checkbox" id="60KC">
-              <label for="60KC">60.0s</label>
+              <p>Kill Cooldown <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="10KC">
+                  <label for="10KC">10.0s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="12KC">
+                  <label for="12KC">12.5s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="15KC">
+                  <label for="15KC">15.0s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="17KC">
+                  <label for="17KC">17.5s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="20KC">
+                  <label for="20KC">20.0s</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="22KC">
+                  <label for="22KC">22.5s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="25KC">
+                  <label for="25KC">25.0s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="27KC">
+                  <label for="27KC">27.5s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="30KC">
+                  <label for="30KC">30.0s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="32KC">
+                  <label for="32KC">32.5s</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="35KC">
+                  <label for="35KC">35.0s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="37KC">
+                  <label for="37KC">37.5s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="40KC">
+                  <label for="40KC">40.0s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="42KC">
+                  <label for="42KC">42.5s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="45KC">
+                  <label for="45KC">45.0s</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="47KC">
+                  <label for="47KC">47.5s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="50KC">
+                  <label for="40KC">50.0s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="52KC">
+                  <label for="52KC">52.5s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="55KC">
+                  <label for="55KC">55.0s</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="57KC">
+                  <label for="57KC">57.5s</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="60KC">
+                  <label for="60KC">60.0s</label>
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+
+              </div>
 
               <!-- Kill Distance -->
               <!-- Short, Medium, Long -->
               <!-- 3 options -->
-              <p>Kill Distance</p>
-              <input type="checkbox" id="short">
-              <label for="short">Short</label>
-              <input type="checkbox" id="med">
-              <label for="med">Medium</label>
-              <input type="checkbox" id="long">
-              <label for="long">Long</label>
+              <p>Kill Distance <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="short">
+                  <label for="short">Short</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="med">
+                  <label for="med">Medium</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="long">
+                  <label for="long">Long</label>
+                </div>
+              </div>
 
               <!-- Visual Tasks -->
               <!-- Yes/No -->
               <!-- 2 options -->
-              <p>Visual Tasks</p>
-              <input type="checkbox" id="visualY">
-              <label for="visualY">Yes</label>
-              <input type="checkbox" id="visualN">
-              <label for="visualN">No</label>
+              <p>Visual Tasks <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="visualY">
+                  <label for="visualY">Yes</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="visualN">
+                  <label for="visualN">No</label>
+                </div>
+              </div>
 
               <!-- Task Bar Updates -->
               <!-- Always, Meetings, Never -->
               <!-- 3 options -->
-              <p>Task Bar Updates</p>
-              <input type="checkbox" id="always">
-              <label for="always">Always</label>
-              <input type="checkbox" id="meetings">
-              <label for="meetings">Meetings</label>
-              <input type="checkbox" id="never">
-              <label for="never">Never</label>
+              <p>Task Bar Updates <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="always">
+                  <label for="always">Always</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="meetings">
+                  <label for="meetings">Meetings</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="never">
+                  <label for="never">Never</label>
+                </div>
+              </div>
 
               <!-- # Common Tasks -->
               <!-- 0, 1, 2 -->
               <!-- 3 options -->
-              <p># Common Tasks</p>
-              <input type="checkbox" id="0CT">
-              <label for="0CT">0</label>
-              <input type="checkbox" id="1CT">
-              <label for="1CT">1</label>
-              <input type="checkbox" id="2CT">
-              <label for="2CT">2</label>
+              <p># Common Tasks <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="0CT">
+                  <label for="0CT">0</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1CT">
+                  <label for="1CT">1</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2CT">
+                  <label for="2CT">2</label>
+                </div>
+              </div>
 
               <!-- # Long Tasks -->
               <!-- 0, 1, 2, 3 -->
               <!-- 4 options -->
-              <p># Long Tasks</p>
-              <input type="checkbox" id="0LT">
-              <label for="0LT">0</label>
-              <input type="checkbox" id="1LT">
-              <label for="1LT">1</label>
-              <input type="checkbox" id="2LT">
-              <label for="2LT">2</label>
-              <input type="checkbox" id="3LT">
-              <label for="3LT">3</label>
+              <p># Long Tasks <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="0LT">
+                  <label for="0LT">0</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1LT">
+                  <label for="1LT">1</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2LT">
+                  <label for="2LT">2</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3LT">
+                  <label for="3LT">3</label>
+                </div>
+              </div>
 
               <!-- # Short Tasks -->
               <!-- 0, 1, 2, 3, 4, 5 -->
               <!--  6 options -->
-              <p># Short Tasks</p>
-              <input type="checkbox" id="0ST">
-              <label for="0ST">0</label>
-              <input type="checkbox" id="1ST">
-              <label for="1ST">1</label>
-              <input type="checkbox" id="2ST">
-              <label for="2ST">2</label>
-              <input type="checkbox" id="3ST">
-              <label for="3ST">3</label>
-              <input type="checkbox" id="4ST">
-              <label for="4ST">4</label>
-              <input type="checkbox" id="5ST">
-              <label for="5ST">5</label>
+              <p># Short Tasks <i class="fas fa-caret-down"></i></p>
+              <div class="row">
+                <div class="col">
+                  <input type="checkbox" id="0ST">
+                  <label for="0ST">0</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="1ST">
+                  <label for="1ST">1</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="2ST">
+                  <label for="2ST">2</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="3ST">
+                  <label for="3ST">3</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="4ST">
+                  <label for="4ST">4</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" id="5ST">
+                  <label for="5ST">5</label>
+                </div>
+              </div>
 
               <!-- Submit Form -->
               <input type="button" value="Find a Game!" onclick="findMatch();">
@@ -759,7 +1185,8 @@
     searchResults = searchResults.filter(x=>x.map == polus);
     // console.log("All: " + data);
     console.log(searchResults);
-    document.getElementById("demo").innerHTML = "Map" + searchResults.map;
+    var map = searchResults.map;
+    document.getElementById("demo").innerHTML = "Map" + map;
     // hold value of Zero Short Tasks
     // var x = document.getElementById("0ST").value;
     // searchResults.filter(x=>x.someProp == someSearchCriteria)
