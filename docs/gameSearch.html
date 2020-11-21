@@ -54,7 +54,7 @@
         <div class="col-sm"> 
           <form>
               <!-- Map Info -->
-              <p>Map</p>
+              <p>Map <i class="fas fa-caret-down"></i></p>
               <input type=checkbox id="Skeld">
               <label for="Skeld">The Skeld</label><br>
               <input type="checkbox" id="MIRA">
@@ -435,6 +435,7 @@
               <!-- # Short Tasks -->
               <!-- 0, 1, 2, 3, 4, 5 -->
               <!--  6 options -->
+              <p># Short Tasks</p>
               <input type="checkbox" id="0ST">
               <label for="0ST">0</label>
               <input type="checkbox" id="1ST">
@@ -449,14 +450,14 @@
               <label for="5ST">5</label>
 
               <!-- Submit Form -->
-              <input type="submit" value="Find a Game!" onclick="findMatch();">
+              <input type="button" value="Find a Game!" onclick="findMatch();">
           </form>
         </div>
 
         <!-- Right Column -->
         <div class="col-sm">
             <!-- <p>Right Column</p> -->
-            <ul id="demo">Hi</ul>
+            <ul id="demo"></ul>
         </div>
     </div>
     
@@ -520,185 +521,245 @@
     console.log('finding matches!');
     // 18 options
     // Map
-    var skeld = document.getElementById("Skeld").value;
-    var MIRA = document.getElementById("MIRA").value;
-    var polus = document.getElementById("Polus").value;
+    var skeld = document.getElementById("Skeld").checked;
+    if(skeld == true)
+      skeld = "Skeld";
+    var MIRA = document.getElementById("MIRA").checked;
+    if(MIRA == true)
+      MIRA = "MIRA HQ";
+    var polus = document.getElementById("Polus").checked;
+    if(polus == true)
+      polus = "Polus";
     // # Imposters
-    var oneImp = document.getElementById("1Imp").value;
-    var twoImp = docoument.getElementByID("2Imp").value;
-    var threeImp = document.getElementById("3Imp").value;
+    var oneImp = document.getElementById("1Imp").checked;
+    var twoImp = document.getElementById("2Imp").checked;
+    var threeImp = document.getElementById("3Imp").checked;
     // Confirm Ejects
-    var CEY = document.getElementById("CEY").value;
-    var CEN = document.getElementById("CEN").value;
+    var CEY = document.getElementById("CEY").checked;
+    var CEN = document.getElementById("CEN").checked;
     // # Emergency Meetings
-    var E0 = document.getElementById("0E").value
-    var E1 = document.getElementById("1E").value;
-    var E2 = document.getElementById("2E").value;
-    var E3 = document.getElementById("3E").value;
-    var E4 = document.getElementById("4E").value;
-    var E5 = document.getElementById("5E").value;
-    var E6 = document.getElementById("6E").value;
-    var E7 = document.getElementById("7E").value;
-    var E8 = document.getElementById("8E").value;
-    var E9 = document.getElementById("9E").value;
+    var E0 = document.getElementById("0E").checked
+    var E1 = document.getElementById("1E").checked;
+    var E2 = document.getElementById("2E").checked;
+    var E3 = document.getElementById("3E").checked;
+    var E4 = document.getElementById("4E").checked;
+    var E5 = document.getElementById("5E").checked;
+    var E6 = document.getElementById("6E").checked;
+    var E7 = document.getElementById("7E").checked;
+    var E8 = document.getElementById("8E").checked;
+    var E9 = document.getElementById("9E").checked;
     // Emergency Meeting Cooldown
-    var EC0 = document.getElementById("0EC").value;
-    var EC5 = document.getElementById("5EC").value;
-    var EC10 = document.getElementById("10EC").value;
-    var EC15 = document.getElementById("15EC").value;
-    var EC20 = document.getElementById("20EC").value;
-    var EC25 = document.getElementById("25EC").value;
-    var EC30 = document.getElementById("30EC").value;
-    var EC35 = document.getElementById("35EC").value;
-    var EC40 = document.getElementById("40EC").value;
-    var EC45 = document.getElementById("45EC").value;
-    var EC50 = document.getElementById("50EC").value;
-    var EC55 = document.getElementById("55EC").value;
-    var EC60 = document.getElementById("60EC").value;
+    var EC0 = document.getElementById("0EC").checked;
+    var EC5 = document.getElementById("5EC").checked;
+    var EC10 = document.getElementById("10EC").checked;
+    var EC15 = document.getElementById("15EC").checked;
+    var EC20 = document.getElementById("20EC").checked;
+    var EC25 = document.getElementById("25EC").checked;
+    var EC30 = document.getElementById("30EC").checked;
+    var EC35 = document.getElementById("35EC").checked;
+    var EC40 = document.getElementById("40EC").checked;
+    var EC45 = document.getElementById("45EC").checked;
+    var EC50 = document.getElementById("50EC").checked;
+    var EC55 = document.getElementById("55EC").checked;
+    var EC60 = document.getElementById("60EC").checked;
     // Discussion Time
-    var DT0 = document.getElementById("0DT").value;
-    var DT15 = document.getElementById("15DT").value;
-    var DT30 = document.getElementById("30DT").value;
-    var DT45 = document.getElementById("45DT").value;
-    var DT60 = document.getElementById("60DT").value;
-    var DT75 = document.getElementById("75DT").value;
-    var DT90 = document.getElementById("90DT").value;
-    var DT105 = document.getElementById("105DT").value;
-    var DT120 = document.getElementById("120DT").value;
+    var DT0 = document.getElementById("0DT").checked;
+    var DT15 = document.getElementById("15DT").checked;
+    var DT30 = document.getElementById("30DT").checked;
+    var DT45 = document.getElementById("45DT").checked;
+    var DT60 = document.getElementById("60DT").checked;
+    var DT75 = document.getElementById("75DT").checked;
+    var DT90 = document.getElementById("90DT").checked;
+    var DT105 = document.getElementById("105DT").checked;
+    var DT120 = document.getElementById("120DT").checked;
     // Vote Time
-    var VT0 = document.getElementById("0VT").value;
-    var VT15 = document.getElementById("15VT").value;
-    var VT30 = document.getElementById("30VT").value;
-    var VT45 = document.getElementById("45VT").value;
-    var VT60 = document.getElementById("60VT").value;
-    var VT75 = document.getElementById("75VT").value;
-    var VT90 = document.getElementById("90VT").value;
-    var VT105 = document.getElementById("105VT").value;
-    var VT120 = document.getElementById("120VT").value;
-    var VT135 = document.getElementById("135VT").value;
-    var VT150 = document.getElementById("150VT").value;
-    var VT165 = document.getElementById("165VT").value;
-    var VT180 = document.getElementById("180VT").value;
-    var VT195 = document.getElementById("195VT").value;
-    var VT210 = document.getElementById("210VT").value;
-    var VT225 = document.getElementById("225VT").value;
-    var VT240 = document.getElementById("240VT").value;
-    var VT255 = document.getElementById("255VT").value;
-    var VT270 = document.getElementById("270VT").value;
-    var VT285 = document.getElementById("285VT").value;
-    var VT300 = document.getElementById("300VT").value;
+    var VT0 = document.getElementById("0VT").checked;
+    var VT15 = document.getElementById("15VT").checked;
+    var VT30 = document.getElementById("30VT").checked;
+    var VT45 = document.getElementById("45VT").checked;
+    var VT60 = document.getElementById("60VT").checked;
+    var VT75 = document.getElementById("75VT").checked;
+    var VT90 = document.getElementById("90VT").checked;
+    var VT105 = document.getElementById("105VT").checked;
+    var VT120 = document.getElementById("120VT").checked;
+    var VT135 = document.getElementById("135VT").checked;
+    var VT150 = document.getElementById("150VT").checked;
+    var VT165 = document.getElementById("165VT").checked;
+    var VT180 = document.getElementById("180VT").checked;
+    var VT195 = document.getElementById("195VT").checked;
+    var VT210 = document.getElementById("210VT").checked;
+    var VT225 = document.getElementById("225VT").checked;
+    var VT240 = document.getElementById("240VT").checked;
+    var VT255 = document.getElementById("255VT").checked;
+    var VT270 = document.getElementById("270VT").checked;
+    var VT285 = document.getElementById("285VT").checked;
+    var VT300 = document.getElementById("300VT").checked;
     // Anynonmous Voting
-    var AVY = document.getElementById("AVY").value;
-    var AVN = document.getElementById("AVN").value;
+    var AVY = document.getElementById("AVY").checked;
+    var AVN = document.getElementById("AVN").checked;
     // Player Speed
-    var Shalf = document.getElementById("0.5").value;
-    var S3fourth = document.getElementById("0.75").value;
-    var S1 = document.getElementById("1.0").value;
-    var S1n1fourth = document.getElementById("1.25").value;
-    var S1nhalf = document.getElementById("1.5").value;
-    var S1n3fourth = document.getElementById("1.75").value;
-    var S2 = document.getElementById("2.0").value;
-    var S2n1fourth = document.getElementById("2.25").value;
-    var S2nhalf = document.getElementById("2.5").value;
-    var S2n3fourth = document.getElementById("2.75").value;
-    var S3 = document.getElementById("3.0").value;
+    var Shalf = document.getElementById("0.5").checked;
+    var S3fourth = document.getElementById("0.75").checked;
+    var S1 = document.getElementById("1.0").checked;
+    var S1n1fourth = document.getElementById("1.25").checked;
+    var S1nhalf = document.getElementById("1.5").checked;
+    var S1n3fourth = document.getElementById("1.75").checked;
+    var S2 = document.getElementById("2.0").checked;
+    var S2n1fourth = document.getElementById("2.25").checked;
+    var S2nhalf = document.getElementById("2.5").checked;
+    var S2n3fourth = document.getElementById("2.75").checked;
+    var S3 = document.getElementById("3.0").checked;
     // Crewmate Vision
-    var C1fourth = document.getElementById("0.25C").value;
-    var Chalf = document.getElementById("0.5C").value;
-    var C3fourth = document.getElementById("0.75C").value;
-    var C1 = document.getElementById("1.0C").value;
-    var C1n1fourth = document.getElementById("1.25C").value;
-    var C1nhalf = document.getElementById("1.5C").value;
-    var C1n3fourth = document.getElementById("1.75C").value;
-    var C2 = document.getElementById("2.0C").value;
-    var C2n1fourth = document.getElementById("2.25C").value;
-    var C2nhalf = document.getElementById("2.5C").value;
-    var C2n3fourth = document.getElementById("2.75C").value;
-    var C3 = document.getElementById("3.0C").value;
-    var C3n1fourth = document.getElementById("3.25C").value;
-    var C3nhalf = document.getElementById("3.5C").value;
-    var C3n3fourth = document.getElementById("3.75C").value;
-    var C4 = document.getElementById("4.0C").value;
-    var C4n1fourth = document.getElementById("4.25C").value;
-    var C4nhalf = document.getElementById("4.5C").value;
-    var C4n3fourth = document.getElementById("4.75C").value;
-    var C5 = document.getElementById("5.0C").value;
+    var C1fourth = document.getElementById("0.25C").checked;
+    var Chalf = document.getElementById("0.5C").checked;
+    var C3fourth = document.getElementById("0.75C").checked;
+    var C1 = document.getElementById("1.0C").checked;
+    var C1n1fourth = document.getElementById("1.25C").checked;
+    var C1nhalf = document.getElementById("1.5C").checked;
+    var C1n3fourth = document.getElementById("1.75C").checked;
+    var C2 = document.getElementById("2.0C").checked;
+    var C2n1fourth = document.getElementById("2.25C").checked;
+    var C2nhalf = document.getElementById("2.5C").checked;
+    var C2n3fourth = document.getElementById("2.75C").checked;
+    var C3 = document.getElementById("3.0C").checked;
+    var C3n1fourth = document.getElementById("3.25C").checked;
+    var C3nhalf = document.getElementById("3.5C").checked;
+    var C3n3fourth = document.getElementById("3.75C").checked;
+    var C4 = document.getElementById("4.0C").checked;
+    var C4n1fourth = document.getElementById("4.25C").checked;
+    var C4nhalf = document.getElementById("4.5C").checked;
+    var C4n3fourth = document.getElementById("4.75C").checked;
+    var C5 = document.getElementById("5.0C").checked;
     // Imposter Vision
-    var I1fourth = document.getElementById("0.25I").value;
-    var Ihalf = document.getElementById("0.5I").value;
-    var I3fourth = document.getElementById("0.75I").value;
-    var I1 = document.getElementById("1.0I").value;
-    var I1n1fourth = document.getElementById("1.25I").value;
-    var I1nhalf = document.getElementById("1.5I").value;
-    var I1n3fourth = document.getElementById("1.75I").value;
-    var I2 = document.getElementById("2.0I").value;
-    var I2n1fourth = document.getElementById("2.25I").value;
-    var I2nhalf = document.getElementById("2.5I").value;
-    var I2n3fourth = document.getElementById("2.75I").value;
-    var I3 = document.getElementById("3.0I").value;
-    var I3n1fourth = document.getElementById("3.25I").value;
-    var I3nhalf = document.getElementById("3.5I").value;
-    var I3n3fourth = document.getElementById("3.75I").value;
-    var I4 = document.getElementById("4.0I").value;
-    var I4n1fourth = document.getElementById("4.25I").value;
-    var I4nhalf = document.getElementById("4.5I").value;
-    var I4n3fourth = document.getElementById("4.75I").value;
-    var I5 = document.getElementById("5.0I").value;
+    var I1fourth = document.getElementById("0.25I").checked;
+    var Ihalf = document.getElementById("0.5I").checked;
+    var I3fourth = document.getElementById("0.75I").checked;
+    var I1 = document.getElementById("1.0I").checked;
+    var I1n1fourth = document.getElementById("1.25I").checked;
+    var I1nhalf = document.getElementById("1.5I").checked;
+    var I1n3fourth = document.getElementById("1.75I").checked;
+    var I2 = document.getElementById("2.0I").checked;
+    var I2n1fourth = document.getElementById("2.25I").checked;
+    var I2nhalf = document.getElementById("2.5I").checked;
+    var I2n3fourth = document.getElementById("2.75I").checked;
+    var I3 = document.getElementById("3.0I").checked;
+    var I3n1fourth = document.getElementById("3.25I").checked;
+    var I3nhalf = document.getElementById("3.5I").checked;
+    var I3n3fourth = document.getElementById("3.75I").checked;
+    var I4 = document.getElementById("4.0I").checked;
+    var I4n1fourth = document.getElementById("4.25I").checked;
+    var I4nhalf = document.getElementById("4.5I").checked;
+    var I4n3fourth = document.getElementById("4.75I").checked;
+    var I5 = document.getElementById("5.0I").checked;
     // Kill Cooldown
-    var KC10 = document.getElementById("10KC").value;
-    var KC12 = document.getElementById("12KC").value;
-    var KC15 = document.getElementById("15KC").value;
-    var KC17 = document.getElementById("17KC").value;
-    var KC20 = document.getElementById("20KC").value;
-    var KC22 = document.getElementById("22KC").value;
-    var KC25 = document.getElementById("25KC").value;
-    var KC27 = document.getElementById("27KC").value;
-    var KC30 = document.getElementById("30KC").value;
-    var KC32 = document.getElementById("32KC").value;
-    var KC35 = document.getElementById("35KC").value;
-    var KC37 = document.getElementById("37KC").value;
-    var KC40 = document.getElementById("40KC").value;
-    var KC42 = document.getElementById("42KC").value;
-    var KC45 = document.getElementById("45KC").value;
-    var KC47 = document.getElementById("47KC").value;
-    var KC50 = document.getElementById("50KC").value;
-    var KC52 = document.getElementById("52KC").value;
-    var KC55 = document.getElementById("55KC").value;
-    var KC57 = document.getElementById("57KC").value;
-    var KC60 = document.getElementById("60KC").value;
+    var KC10 = document.getElementById("10KC").checked;
+    var KC12 = document.getElementById("12KC").checked;
+    var KC15 = document.getElementById("15KC").checked;
+    var KC17 = document.getElementById("17KC").checked;
+    var KC20 = document.getElementById("20KC").checked;
+    var KC22 = document.getElementById("22KC").checked;
+    var KC25 = document.getElementById("25KC").checked;
+    var KC27 = document.getElementById("27KC").checked;
+    var KC30 = document.getElementById("30KC").checked;
+    var KC32 = document.getElementById("32KC").checked;
+    var KC35 = document.getElementById("35KC").checked;
+    var KC37 = document.getElementById("37KC").checked;
+    var KC40 = document.getElementById("40KC").checked;
+    var KC42 = document.getElementById("42KC").checked;
+    var KC45 = document.getElementById("45KC").checked;
+    var KC47 = document.getElementById("47KC").checked;
+    var KC50 = document.getElementById("50KC").checked;
+    var KC52 = document.getElementById("52KC").checked;
+    var KC55 = document.getElementById("55KC").checked;
+    var KC57 = document.getElementById("57KC").checked;
+    var KC60 = document.getElementById("60KC").checked;
     // Kill Distance
-    var short = document.getElementById("short").value;
-    var med = document.getElementById("med").value;
-    var long = document.getElementById("long").value;
+    var short = document.getElementById("short").checked;
+    var med = document.getElementById("med").checked;
+    var long = document.getElementById("long").checked;
     // Visual Tasks
-    var visualY = document.getElementById("visualY").value;
-    var visualN = document.getElementById("visualN").value;
+    var visualY = document.getElementById("visualY").checked;
+    var visualN = document.getElementById("visualN").checked;
     // Taskbar Update
-    var always = document.getElementById("always").value;
-    var meetings = document.getElementById("meetings").value;
-    var never = document.getElementById("never").value;
+    var always = document.getElementById("always").checked;
+    var meetings = document.getElementById("meetings").checked;
+    var never = document.getElementById("never").checked;
     // Common Tasks
-    var CT0 = document.getElementById("0CT").value;
-    var CT1 = document.getElementById("1CT").value;
-    var CT2 = document.getElementById("2CT").value;
+    var CT0 = document.getElementById("0CT").checked;
+    var CT1 = document.getElementById("1CT").checked;
+    var CT2 = document.getElementById("2CT").checked;
     // Long Tasks
-    var LT0 = document.getElementById("0LT").value;
-    var LT1 = document.getElementById("1LT").value;
-    var LT2 = document.getElementById("2LT").value;
-    var LT3 = document.getElementById("3LT").value;
+    var LT0 = document.getElementById("0LT").checked;
+    var LT1 = document.getElementById("1LT").checked;
+    var LT2 = document.getElementById("2LT").checked;
+    var LT3 = document.getElementById("3LT").checked;
     // Short Tasks
-    var ST0 = document.getElementById("0ST").value;
-    var ST1 = document.getElementById("1ST").value;
-    var ST2 = document.getElementById("2ST").value;
-    var ST3 = document.getElementById("3ST").value;
-    var ST4 = document.getElementById("4ST").value;
-    var ST5 = document.getElementById("5ST").value;
+    var ST0 = document.getElementById("0ST").checked;
+    var ST1 = document.getElementById("1ST").checked;
+    var ST2 = document.getElementById("2ST").checked;
+    var ST3 = document.getElementById("3ST").checked;
+    var ST4 = document.getElementById("4ST").checked;
+    var ST5 = document.getElementById("5ST").checked;
 
-    // make copy of data for displaying
-    var searchResults = data;
-    searchResults.filter(x=>x.Skeld == skeld);
-    console.log(data);
-    document.getElementById("demo").innerHTML = searchResults;
+    console.log('The Skelds value is ' + skeld);
+
+    // data to search through
+    var searchResults =
+  [
+  {
+      "gameID": "",
+      "numPlayers": 6,
+      "map": "Polus",
+      "numImp": 3,
+      "confirmEjects": "no",
+      "numEmergency": 1,
+      "emergencyCool": 15,
+      "discuss": 15,
+      "vote": 75,
+      "anyVote": "yes",
+      "speed": 1.5,
+      "crewVis": 1.0,
+      "impVis": 3.0,
+      "killCool": 30.0,
+      "killDistance": "medium",
+      "visual": "yes",
+      "taskbar": "meetings",
+      "commonTasks": 1,
+      "longTasks": 1,
+      "shortTasks": 2
+
+  },
+  {
+      "gameID": "",
+      "numPlayers": 6,
+      "map": "Skeld",
+      "numImp": 2,
+      "confirmEjects": "yes",
+      "numEmergency": 2,
+      "emergencyCool": 20,
+      "discuss": 45,
+      "vote": 120,
+      "anyVote": "no",
+      "speed": 1.5,
+      "crewVis": 0.75,
+      "impVis": 2.5,
+      "killCool": 17.5,
+      "killDistance": "short",
+      "visual": "no",
+      "taskbar": "always",
+      "commonTasks": 2,
+      "longTasks": 2,
+      "shortTasks": 3
+  }
+  ];
+  console.log(searchResults);
+
+    searchResults = searchResults.filter(x=>x.map == skeld);
+    console.log(searchResults);
+    searchResults = searchResults.filter(x=>x.map == polus);
+    // console.log("All: " + data);
+    console.log(searchResults);
+    document.getElementById("demo").innerHTML = "Map" + searchResults.map;
     // hold value of Zero Short Tasks
     // var x = document.getElementById("0ST").value;
     // searchResults.filter(x=>x.someProp == someSearchCriteria)

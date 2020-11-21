@@ -49,15 +49,48 @@
     <div class="row">
         <!-- Left Column -->
         <div class="col-sm">
-            <p>Left Column</p>
+            <!-- <p>Left Column</p> -->
         </div>
         <!-- Middle Column-->
         <div class="col-sm"> 
-            <p>Hello 2 you!</p>
+            <!-- Profile Picture and Name -->
+            <p class="username"><img src="friendIcon.png" class="userPic"> I told you I </p>
+            <!-- Clickable buttons -->
+            <div class="row">
+                <div class="col-sm">
+                    <button type="button" class="btn btn-dark" id="friend" onclick="friend()">Remove friend</button>
+                </div>
+                <div class="col-sm">
+                    <a href="message.html"><button type="button" class="btn btn-dark">Start chat</button></a>
+                </div>
+                <div class="col-sm">
+                    <button type="button" class="btn btn-dark"><i class="fas fa-flag"></i> Report Player</button>
+                </div>
+            </div>
+            <!-- Preferred Mode -->
+            <h2>Preferred Mode</h2>
+            <p>Map(s): MIRA HQ, Polus</p>
+            <p># Imposters: 2</p>
+            <p>Confirm Ejects: No</p>
+            <p># Emergency Meetings: 1, 2, 5</p>
+            <p>Emergency Cooldown: 0s, 15s</p>
+            <p>Discussion Time: 30s</p>
+            <p>Voting Time: 75s</p>
+            <p>Anonymous Votes: No</p>
+            <p>Player Speed: 1.5x</p>
+            <p>Crewmate Vision: 1.0x</p>
+            <p>Imposter Vision: 3.0x</p>
+            <p>Kill Cooldown: 15.0s</p>
+            <p>Kill Distance: Medium</p>
+            <p>Visual Tasks: No</p>
+            <p>Task Bar Updates: Meetings</p>
+            <p># Common Tasks: 1</p>
+            <p># Long Tasks: 2</p>
+            <p># Short Tasks: 3</p>
         </div>
         <!-- Right Column -->
         <div class="col-sm">
-            <p>Right Column</p>
+            <!-- <p>Right Column</p> -->
         </div>
     </div>
     
@@ -65,4 +98,20 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
+
+<script type="text/javascript">
+    function friend()
+    {
+        var status = document.getElementById("friend");
+        if(status.innerHTML === "Add friend")
+        {
+            status.innerHTML = "Remove friend";
+        }
+        else
+        {
+            status.innerHTML = "Add friend";
+        }
+    }
+</script>
+
 </html>
